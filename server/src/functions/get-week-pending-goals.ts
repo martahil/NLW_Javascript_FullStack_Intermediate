@@ -1,11 +1,8 @@
 import dayjs from "dayjs"
-import weekOfYear from 'dayjs/plugin/weekOfYear'
 import { db } from "../db"
 import { goalCompletions, goals } from "../db/schema"
 import { and, count, eq, gte, lte, sql } from 'drizzle-orm'
 import { number } from "zod"
-
-dayjs.extend(weekOfYear)
 
 export async function getWeekPendingGoals() {
   const firstDayOfWeek = dayjs().startOf('week').toDate()
@@ -25,7 +22,7 @@ export async function getWeekPendingGoals() {
       .where(lte(goals.createdAt, lastDayOfWeek))    
   )
 
-  const goalCompletionCounts = db.$with('goal_completions_counts').as(
+  const goalCompletionCounts = db.$with('goal_completion_counts').as(
     db
       .select({
         goalId: goalCompletions.goalId,
