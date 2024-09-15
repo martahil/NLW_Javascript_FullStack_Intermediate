@@ -1,4 +1,4 @@
-import { CheckCircle2, Plus, PlusCircle } from 'lucide-react'
+import { CheckCircle2, Plus } from 'lucide-react'
 import { Button } from './ui/button'
 import { DialogTrigger } from './ui/dialog'
 import { InOrbitIcon } from './in-orbit-icon'
@@ -40,22 +40,22 @@ export function Summary() {
 
       <div className="flex flex-wrap gap-3">
         <OutlineButton>
-          <PlusCircle className="size-4 text-zinc-600" />
+          <Plus className="size-4 text-zinc-600" />
           Meditate
         </OutlineButton>
 
         <OutlineButton>
-          <PlusCircle className="size-4 text-zinc-600" />
+          <Plus className="size-4 text-zinc-600" />
           Swimming
         </OutlineButton>
 
         <OutlineButton>
-          <PlusCircle className="size-4 text-zinc-600" />
+          <Plus className="size-4 text-zinc-600" />
           Work out
         </OutlineButton>
 
         <OutlineButton>
-          <PlusCircle className="size-4 text-zinc-600" />
+          <Plus className="size-4 text-zinc-600" />
           Eat healthily
         </OutlineButton>
       </div>
